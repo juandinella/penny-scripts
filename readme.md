@@ -1,6 +1,6 @@
-# @juandinella/scripts-frontend
+# @juandinella/penny-scripts
 
-[![npm version](https://badge.fury.io/js/%40pixel2html%2Fscripts-frontend.svg)](https://badge.fury.io/js/%40pixel2html%2Fscripts-frontend)
+[![npm version](https://badge.fury.io/js/%40juandinella%2Fpenny-scripts.svg)](https://badge.fury.io/js/%40juandinella%2Fpenny-scripts)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 A highly shareable and customizable webpack config.
@@ -19,11 +19,11 @@ A highly shareable and customizable webpack config.
 ## Getting Started FAST!
 
 ```sh
-npm install --dev @juandinella/scripts-frontend
+npm install --dev @juandinella/penny-scripts
 ```
 
 ```sh
-npx scripts-frontend development
+npx penny-scripts development
 ```
 
 :fire:
@@ -45,17 +45,12 @@ We have a set of opinions towards how the files should look like for it to be a 
 
 That is to be compliant with the defaults we were using on our `generator-frontend` package, however this is easy to customize.
 
-## Frontend Generator
-
-If you're using our [Frontend Generator](http://npm.im/@pixel2html/generator-frontend) or our [Shopify Generator](http://npm.im/@pixel2html/generator-shopify) then you don't have to to anything since they already use this package.
-But if you're coming from scratch this is what you need to do:
-
 ## Node
 
 Create an `index.js` with the following:
 
 ```js
-const { compiler } = require("@pixel2html/scripts-frontend");
+const { compiler } = require("@juandinella/penny-scripts");
 
 // Options are development, production or debug
 const mode = "development";
@@ -72,7 +67,7 @@ You can now run `node index` to get your JS compiled.
 
 ```js
 const gulp = require("gulp");
-const { compiler } = require("@pixel2html/scripts-frontend");
+const { compiler } = require("@juandinella/penny-scripts");
 
 gulp.task("start", () => compiler("development"));
 gulp.task("build", () => compiler("production"));
@@ -97,59 +92,3 @@ module.exports = function(config, webpack) {
   return config;
 };
 ```
-
-## Shopify
-
-Since we do quite a bit of Shopify ourselves we added some opinionated list of shopify plugins which you can access like this:
-
-`scripts.config.js`
-
-```js
-const { getShopifyPlugins } = require("@pixel2html/scripts-generator");
-
-module.exports = (config, webpack) => {
-  config.plugins = getShopifyPlugins();
-
-  // So the sourcemaps work on Shopify
-  config.output.filename = "[name].js.liquid";
-  return config;
-};
-```
-
-## Shopify Generator
-
-We also supplied a fully opinionated Shopify config which you can setup like this:
-
-`scripts.config.js`
-
-```js
-const { createShopifyConfig } = require("@pixel2html/scripts-frontend");
-
-module.exports = config => createShopifyConfig(config);
-```
-
-:fire:
-
-This is compliant with the way our Shopify Generator works meaning your starting point is:
-
-`src/scripts/index.js`
-
-and the bundle outputs to:
-
-`.deploy/assets/main.js.liquid`
-
-While splitting vendor code from node_modules to:
-
-`.deploy/assets/vendor.js.liquid`
-
-The liquid extension is used for sourcemaps support via Shopify Cache busting situation for assets.
-
-Check the examples folder for some reasonable examples.
-
-## PRs Welcome!
-
-Open an issue so we can discuss about it, then file a PR. :heart_eyes:
-
-Love,
-
-[Pixel2HTML](https://pixel2html.com/)

@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const { compiler } = require('@pixel2html/scripts-frontend')
+const { compiler } = require('@juandinella/penny-scripts')
 
 gulp.task('start', () => compiler('development'))
 gulp.task('build', () => compiler('production'))
