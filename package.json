@@ -1,6 +1,6 @@
 {
   "name": "@juandinella/penny-scripts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "parse javascript with webpack",
   "main": "dist/common.js",
   "module": "dist/modular.js",
@@ -28,7 +28,7 @@
     "@babel/core": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "@pixel2html/babel-preset": "^1.7.1",
-    "@pixel2html/eslint-config": "^1.7.0",
+    "@juandinella/eslint-config": "^1.0.0",
     "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
     "eslint-loader": "^3.0.3",
@@ -40,7 +40,7 @@
     "rollup": "^1.27.14"
   },
   "eslintConfig": {
-    "extends": "@pixel2html/eslint-config",
+    "extends": "@juandinella/eslint-config",
     "env": {
       "browser": true,
       "node": true,

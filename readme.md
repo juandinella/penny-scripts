@@ -10,7 +10,7 @@ A highly shareable and customizable webpack config.
 - Dynamic Imports (Code Splitting)
 - ES2017+
 - JSX
-- Linting via `@pixel2html/eslint-config`
+- Linting via `@juandinella/eslint-config`
 - Parsing all js (ours and vendor, vendor is cached though)
 - Sourcemaps for debugging
 - Tree-Shaking

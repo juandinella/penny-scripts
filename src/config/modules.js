@@ -10,7 +10,7 @@ const modules = {
           options: {
             eslintPath: require.resolve('eslint'),
             baseConfig: {
-              extends: [require.resolve('@pixel2html/eslint-config')]
+              extends: [require.resolve('@juandinella/eslint-config')]
             },
             ignore: false,
             useEslintrc: false
