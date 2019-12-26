@@ -1,0 +1,50 @@
+{
+  "name": "@juandinella/penny-scripts",
+  "version": "1.0.0",
+  "description": "parse javascript with webpack",
+  "main": "dist/common.js",
+  "module": "dist/modular.js",
+  "repository": "https://github.com/juandinella/penny-scripts",
+  "author": "Juan Di Nella <juan.dinella@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "scripts-frontend": "cli.js"
+  },
+  "files": [
+    "readme.md",
+    "dist/common.js",
+    "dist/modular.js",
+    "cli.js"
+  ],
+  "scripts": {
+    "lint": "eslint 'src/**/*.js'",
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build",
+    "postversion": "git push; git push --tags"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "@pixel2html/babel-preset": "^1.7.1",
+    "@pixel2html/eslint-config": "^1.7.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.41.4",
+    "webpack-bundle-analyzer": "^3.6.0"
+  },
+  "devDependencies": {
+    "rollup": "^1.27.14"
+  },
+  "eslintConfig": {
+    "extends": "@pixel2html/eslint-config",
+    "env": {
+      "browser": true,
+      "node": true,
+      "mocha": true
+    }
+  }
+}
