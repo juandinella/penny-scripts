@@ -31,7 +31,7 @@ const modules = {
             loader: 'babel-loader',
             options: {
               babelrc: false,
-              presets: [require.resolve('@pixel2html/babel-preset')],
+              presets: [require.resolve('@juandinella/babel-preset')],
               compact: true,
               highlightCode: true,
             }
@@ -45,7 +45,7 @@ const modules = {
             options: {
               babelrc: false,
               compact: false,
-              presets: [require.resolve('@pixel2html/babel-preset/dependencies')],
+              presets: [require.resolve('@juandinella/babel-preset/dependencies')],
               cacheDirectory: true,
               highlightCode: true,
             }

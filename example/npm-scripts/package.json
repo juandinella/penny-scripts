@@ -10,6 +10,6 @@
     "debug": "penny-scripts debug"
   },
   "dependencies": {
-    "@pixel2html/penny-scripts": "*"
+    "@juandinella/penny-scripts": "*"
   }
 }

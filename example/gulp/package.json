@@ -10,7 +10,7 @@
     "debug": "penny-scripts debug"
   },
   "dependencies": {
-    "@pixel2html/penny-scripts": "*",
+    "@juandinella/penny-scripts": "*",
     "gulp": "^4.0.0"
   }
 }
