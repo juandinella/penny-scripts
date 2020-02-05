@@ -22,7 +22,7 @@ const modules = {
     },
     {
       oneOf: [
-      // Parse OUR js
+        // Parse OUR js
         {
           test: /\.(js|jsx|mjs)$/,
           include: src,
@@ -53,6 +53,7 @@ const modules = {
         }
       ]
     }
-  ] }
+  ]
+}
 
 export default modules
