@@ -1,6 +1,6 @@
 {
   "name": "@juandinella/penny-scripts",
-  "version": "1.2.5",
+  "version": "1.2.4",
   "description": "parse javascript with webpack",
   "main": "dist/common.js",
   "module": "dist/modular.js",
@@ -25,16 +25,16 @@
     "postversion": "git push; git push --tags"
   },
   "dependencies": {
-    "@babel/core": "^7.15.8",
+    "@babel/core": "^7.15.7",
     "@babel/runtime": "^7.15.4",
     "@juandinella/babel-preset": "*",
     "@juandinella/eslint-config": "*",
     "babel-loader": "^8.2.2",
-    "eslint": "^8.0.0",
+    "eslint": "^7.0.0",
     "eslint-loader": "^4.0.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^5.58.2",
-    "webpack-bundle-analyzer": "^3.6.0"
+    "webpack": "^4.41.4",
+    "webpack-bundle-analyzer": "^4.5.0"
   },
   "devDependencies": {
     "rollup": "^2.58.0"
